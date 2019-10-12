@@ -33,6 +33,7 @@ public class showPList extends AppCompatActivity {
     public static List<String> checkCount;
     Pdetails pdetails;
     public static List<Pdetails> pDetailsList;
+    public static List<Pdetails> allDetail;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         coachno= getIntent().getExtras().getStringArray("coachnos");
@@ -46,6 +47,7 @@ public class showPList extends AppCompatActivity {
         List1=new ArrayList<>();
         List2=new ArrayList<>();
         pDetailsList=new ArrayList<>();
+        allDetail=new ArrayList<>();
         checkCount=new ArrayList<>();
         databasePList= FirebaseDatabase.getInstance().getReference().child("passengers");
         databaseDetails= FirebaseDatabase.getInstance().getReference().child("pdetails");
@@ -68,21 +70,19 @@ public class showPList extends AppCompatActivity {
                 pDetailsList.clear();
                 for(DataSnapshot data:dataSnapshot.getChildren()) {
                     pdetails = data.getValue(Pdetails.class);
+                    allDetail.add(pdetails);
                     String pcoach=pdetails.getCoach();
                     int i;
                     for(i=0;i<coachno.length;i++)
                     {
-
                         if(Integer.parseInt(pcoach.trim())==Integer.parseInt(coachno[i].trim()))
                         {
                             pDetailsList.add(pdetails);
                             break;
                         }
                     }
-
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -122,14 +122,19 @@ public class showPList extends AppCompatActivity {
     }
     public void sendChecked() {
         int c;
+        Toast.makeText(getApplicationContext(),""+pDetailsList.size(),Toast.LENGTH_SHORT).show();
         for (String str : checkCount)
         {
             c=0;
-            for(Pdetails pd:pDetailsList)
+            for(Pdetails pd:allDetail)
             {
+
+                Toast.makeText(getApplicationContext(),""+pd.getPnr(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),""+str,Toast.LENGTH_SHORT).show();
                 if(str.equals(pd.getPnr()))
                 {
                     pd.check="yes";
+                    Toast.makeText(getApplicationContext(),""+c,Toast.LENGTH_SHORT).show();
                     databaseDetails.child(Integer.toString(c)).setValue(pd);
                     onStart();
                     break;
@@ -137,7 +142,6 @@ public class showPList extends AppCompatActivity {
                 c++;
             }
         }
-
     }
 }
 

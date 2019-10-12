@@ -60,12 +60,7 @@ public class PassengerAdapter extends ArrayAdapter<Passenger> {
                     else{
                         showPList.checkCount.remove(artist.getPnrno());
                     }
-                    String text=" ";
-                    for(String str:showPList.checkCount)
-                    {
-                        text+=" "+str;
-                    }
-                    showPList.check.setText(text);
+
 
 
                 }

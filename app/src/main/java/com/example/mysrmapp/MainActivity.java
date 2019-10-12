@@ -74,6 +74,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
         else
-            Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Incorrect Id/Password",Toast.LENGTH_SHORT).show();
     }
 }
