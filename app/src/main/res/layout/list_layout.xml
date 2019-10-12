@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mylayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewPnr"
+        android:layout_width="124dp"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="115dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:text="View Details"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="57dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

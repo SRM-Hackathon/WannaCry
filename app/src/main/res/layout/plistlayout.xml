@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headPnr"
+        android:layout_width="113dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:text="Pnr No"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/headName"
+        android:layout_width="124dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:text="Name"
+        android:textStyle="bold" />
+
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="wrap_content"
+        android:layout_height="215dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/headDetails"
+        android:layout_width="69dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="50dp"
+        android:text="Details"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/headCheck"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="50dp"
+        android:text="Check"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/uncheckBar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="#DA7B9B"
+        android:paddingTop="5dp"
+        android:text="Uncheked"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/checkBar"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="350dp"
+        android:background="#96C2E4"
+        android:paddingTop="5dp"
+        android:text="Checked"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="wrap_content"
+        android:layout_height="329dp"
+        android:layout_marginTop="430dp" />
+    <TextView
+        android:id="@+id/bottomPnr"
+        android:layout_width="113dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:text="Pnr No"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/bottomName"
+        android:layout_width="124dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="390dp"
+        android:layout_weight="1"
+        android:text="Name"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/bottomDetails"
+        android:layout_width="69dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="390dp"
+        android:text="Details"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/bottomCheck"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="390dp"
+        android:text="Check"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_width="101dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="305dp"
+        android:text="Submit" />
+
+
+</RelativeLayout>

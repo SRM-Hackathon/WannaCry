@@ -3,6 +3,7 @@ package com.example.mysrmapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     String id="";
     String pass;
     List<tteDetails> detailsList;
+    String sendId;
     DatabaseReference auth= FirebaseDatabase.getInstance().getReference().child("ttedetails");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +64,15 @@ public class MainActivity extends AppCompatActivity {
         for(tteDetails tdetails:detailsList) {
             if (id.equals(tdetails.getTte_id()) && pass.equals(tdetails.getPassword())) {
                 flag = 1;
+                sendId=tdetails.getTte_id();
                 break;
             }
         }
-        if(flag==1)
-            Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+        if(flag==1) {
+            Intent i=new Intent(this,showTtteDuty.class);
+            i.putExtra("id",sendId);
+            startActivity(i);
+        }
         else
             Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
     }
